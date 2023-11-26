@@ -14,7 +14,7 @@
 :root.theme-light {
   --bg-color: #E7E7E7;
   --accent-color: #1A1A1A;
-  --page-background-color: var(#ffffff);
+  --page-background-color: #ffffff;
   --page-background-image: repeating-linear-gradient(
       270deg,
       #d3d3d3 0 2px,
@@ -26,7 +26,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-background-color: var(#000000);
+    --page-background-color: #000000;
     --page-background-image: repeating-linear-gradient(
         270deg,
         #000000 0 2px,

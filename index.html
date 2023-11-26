@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <title>Закрывающий тег</title>
-    <link rel="icon" href="./svg/favicon.svg" sizes="any">
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="./images/" sizes="any">
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -44,7 +44,48 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="main">
+      <ul class="cards-list">
+        <li class="cards-list__item">
+          <article class="card">
+            <header class="card__header">
+              <h2 class="card__title">
+                Фритрек и нулевой спринт: Подготовка к работе
+              </h2>
+            </header>
+            <div class="card__img-wrapper">
+              <span class="card__img-label">&lt;/HTML&gt;</span>
+              <img
+                class="card__img"
+                src="./images/image-1.jpg"
+                alt="Микроавтобус едет по дороге"
+              />
+            </div>
+            <div class="card__content">
+              <p>
+                Это было самое начало пути. На этом этапе важно было
+                проникнуться основами и настроиться на учёбу. И, возможно,
+                подумать, как новые знания могут повлиять на ваше будущее.
+              </p>
+              <p>Вперед, навстречу приключениям!</p>
+            </div>
+            <footer class="card__footer">
+              <button
+                type="button"
+                class="card__icon-button"
+              >
+              </button>
+              <button
+                id="article_1_like_button"
+                type="button"
+                class="button card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
+          </article>
+        </li>
+      </ul>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
