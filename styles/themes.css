@@ -1,13 +1,38 @@
 :root.theme-dark {
   --bg-color: #000;
   --accent-color: #00CC14;
-  --animation-contour-color: #00CC14;
-  --pattern: 
-    repeating-linear-gradient(90 deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px)
+  --page-background-color: var(#000000);
+  --page-background-image: repeating-linear-gradient(
+      270deg,
+      #000000 0 2px,
+      #00000000 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #000000 0 2px, #00000000 2px 4px),
+    linear-gradient(180deg, #007f0c, #004306);
 }
 
 :root.theme-light {
   --bg-color: #E7E7E7;
   --accent-color: #1A1A1A;
+  --page-background-color: var(#ffffff);
+  --page-background-image: repeating-linear-gradient(
+      270deg,
+      #d3d3d3 0 2px,
+      #d3d3d300 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+    linear-gradient(270deg, #e7e7e7 0.01%, #1a1a1a);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: var(#000000);
+    --page-background-image: repeating-linear-gradient(
+        270deg,
+        #000000 0 2px,
+        #00000000 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #000000 0 2px, #00000000 2px 4px),
+      linear-gradient(to bottom, #007f0c, #004306);
+  }
+}
