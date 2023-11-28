@@ -32,7 +32,7 @@
     --text-color: #00CC14;
     --page-background-image: repeating-linear-gradient(270deg, #000000 0 2px,#00000000 2px 4px),
       repeating-linear-gradient(180deg, #000000 0 2px, #00000000 2px 4px),
-      linear-gradient(to bottom, #007f0c, #004306);
+      linear-gradient(180deg, #007f0c, #004306);
     --accent-color: #00CC14;
   }
     
