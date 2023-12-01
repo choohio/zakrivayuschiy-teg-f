@@ -208,7 +208,6 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
-  aspect-ratio: 1 / 1;
 }
 
 @supports (
