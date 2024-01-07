@@ -2,7 +2,7 @@
   --bg-color: #000;
   --accent-color: #00CC14;
   --text-color: #00CC14;
-  --page-background-color: var(#000000);
+  --page-background-color: #000000;
   --page-background-image: repeating-linear-gradient(
       270deg,
       #000000 0 2px,

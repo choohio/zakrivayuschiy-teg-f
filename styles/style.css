@@ -50,7 +50,7 @@
 .dialog__form {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
-  grid-template-rows: 1fr fit-content;
+  grid-template-rows: 1fr min-content;
   row-gap: 30px;
 }
 
@@ -97,7 +97,7 @@
   margin-block-end: 20px;
 }
 
-.header__subtitle {
+.header__title-text {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
@@ -179,12 +179,9 @@
   max-inline-size: 696px;
 }
 
-.card__header {
+.card__title {
   border-block-end: 2px solid var(--text-color, #000000);
   padding: 4px 10px;
-}
-
-.card__title {
   font-size: 18px;
   line-height: normal;
   font-variation-settings: "wght" var(--headings-font-weight, 700);
@@ -214,6 +211,7 @@
   display: block;
   object-fit: cover;
   object-position: center;
+  height: 696px;
   inline-size: 100%;
 }
 
@@ -253,6 +251,53 @@
   transition: border-color 0.3s ease;
   cursor: pointer;
   appearance: none;
+}
+
+.card__like-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 2px solid var(--main-border-color);
+  padding: 9px 17px 9px 17px;
+  width: 130px;
+  height: 38px;
+  overflow: hidden;
+  align-self: end;
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-size: 14px;
+}
+
+.card__like-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 #000;
+}
+
+.card__like-button:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-background-color);
+  transform: translateX(100%);
+  mix-blend-mode: difference;
+  color: var(--main-background-color);
+}
+
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-border-color);
+  mix-blend-mode: difference;
+  color: var(--main-background-color)
 }
 
 .card__icon-button:focus {
@@ -309,6 +354,11 @@
   align-items: center;
   gap: 10px;
   padding: 15px 20px;
+  width: 335px;
+  height: 55px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12.6px;
 }
 
 .button__text,
@@ -328,13 +378,17 @@
 }
 
 @media (width <= 375px) {
+  .card__img {
+    height: 375px;
+  }
+
   .modal {
     padding: 28px 34px 28px 40px;
     max-inline-size: 340px;
   }
 
   .button--save {
-    flex-direction: column;
+    
   }
 
   .button__icon {
@@ -347,13 +401,12 @@
   max-inline-size: 340px;
 }
 
-.footer__button {
-  flex-direction: row;
+.footer__button-image {
+  block-size: 21px;
 }
 
-.footer__button-image {
-  margin: 0 2px 0 19px;
-  block-size: 20px;
+.footer__button-text {
+  white-space: nowrap;
 }
 
 /* Фильтры */
